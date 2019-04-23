@@ -13,9 +13,10 @@ app.use(helmet())
 
 app.set('view engine', 'ejs')
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(express.static(path.join(__dirname, '/public')))
 app.use(bodyParser.json())
+app.use(express.static(path.join(__dirname, '/public')))
 
+app.use('/', require('./routes/index.js'))
 
 const server = app.listen(
   PORT
