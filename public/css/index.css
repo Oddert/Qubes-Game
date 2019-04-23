@@ -45,10 +45,42 @@ nav.Nav {
   top: 0px;
   background: #a4c2d8;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3), inset 20px 10px 20px #a4c2d8, inset -20px 10px 20px #a4c2d8; }
+  nav.Nav ul {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    transition: .1s linear; }
+    nav.Nav ul span {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: space-between; }
+      nav.Nav ul span.Nav__logo li a {
+        font-weight: 700;
+        font-size: 22px; }
+      nav.Nav ul span li {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 30px;
+        cursor: pointer;
+        transition: .1s linear; }
+        nav.Nav ul span li a {
+          color: #fff;
+          font-size: 18px;
+          text-decoration: none; }
+        nav.Nav ul span li:hover {
+          background: #70a0c2; }
 
 section.About {
   background: #a4c2d8;
-  padding: 50px 0; }
+  padding: 100px 0; }
   section.About .About__flex {
     display: flex; }
     section.About .About__flex .About__flex__section {
@@ -57,6 +89,8 @@ section.About {
       flex-direction: column;
       justify-content: center; }
       section.About .About__flex .About__flex__section.image .About__main_image {
-        max-width: 100%; }
+        max-width: 100%;
+        border-radius: 20px;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); }
       section.About .About__flex .About__flex__section.text {
         padding: 40px; }
