@@ -1,3 +1,7 @@
+h2 {
+  color: #ecf0f1;
+  font-size: 36px; }
+
 section.Banner {
   box-sizing: border-box;
   width: 100%;
@@ -136,20 +140,20 @@ section.About {
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); }
       section.About .About__flex .About__flex__section.text {
         padding: 100px; }
-        section.About .About__flex .About__flex__section.text h2 {
-          color: #ecf0f1;
-          font-size: 36px; }
         section.About .About__flex .About__flex__section.text p.first {
           font-weight: bold; }
 
 section.Gameplay {
-  color: #ecf0f1; }
+  color: #ecf0f1;
+  background-color: #a4c2d8; }
+  section.Gameplay h2 {
+    margin: 0;
+    text-align: center; }
   section.Gameplay .Gameplay__grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 50px;
-    padding: 50px;
-    background-color: #a4c2d8; }
+    padding: 50px; }
     section.Gameplay .Gameplay__grid .text h4 {
       color: #ecf0f1;
       font-size: 32px; }
