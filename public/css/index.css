@@ -93,7 +93,7 @@ nav.Nav {
       flex-direction: row;
       align-items: stretch;
       justify-content: space-between;
-      transition: .15s linear; }
+      transition: all .15s linear; }
       nav.Nav ul span.Nav--logo a li {
         display: flex;
         align-items: center;
@@ -137,6 +137,27 @@ section.About {
       section.About .About__flex .About__flex__section.text {
         padding: 100px; }
 
+section.Gameplay .Gameplay__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
+  padding: 50px;
+  background-color: #a4c2d8; }
+  section.Gameplay .Gameplay__grid .Gameplay__grid--one.text {
+    grid-column: span 2; }
+  section.Gameplay .Gameplay__grid .Gameplay__grid--one.image {
+    grid-column: span 1; }
+  section.Gameplay .Gameplay__grid .Gameplay__grid--two.text {
+    grid-column: span 2; }
+  section.Gameplay .Gameplay__grid .Gameplay__grid--two.image {
+    grid-column: span 1; }
+  section.Gameplay .Gameplay__grid .Gameplay__grid--three.text {
+    grid-column: span 2; }
+  section.Gameplay .Gameplay__grid .Gameplay__grid--three.image {
+    grid-column: span 1; }
+  section.Gameplay .Gameplay__grid img {
+    max-width: 100%; }
+
 @media only screen and (max-width: 850px) {
   nav.Nav ul .Nav__toggle {
     color: red;
@@ -148,11 +169,16 @@ section.About {
     position: absolute;
     top: 0;
     right: 0;
-    display: none; }
+    visibility: none;
+    display: none;
+    opacity: 0;
+    transition: visibility 0s, opacity .1s linear; }
     nav.Nav ul span.Nav--items li {
       padding: 3vw 6vw; }
   nav.Nav.open ul span.Nav--items {
-    display: flex; }
+    display: flex;
+    visibility: visible;
+    opacity: 1; }
   nav.Nav.open ul .Nav__toggle__icon .Nav__toggle--bar {
     margin-top: 0;
     margin-bottom: 0; }

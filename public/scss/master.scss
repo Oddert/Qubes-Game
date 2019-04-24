@@ -18,3 +18,30 @@ html, body, section {
   }
 
 }
+
+svg {
+  .instructions-three-1 {
+    fill: none;
+  }
+  .instructions-three-2 {
+    fill: #fff;
+  }
+  .instructions-three-3 {
+    clip-path: url(#clip-path);
+  }
+  .instructions-two-1 {
+    fill: none;
+  }
+  .instructions-two-2 {
+    clip-path: url(#clip-path);
+  }
+  .instructions-one-1 {
+    fill: none;
+  }
+  .instructions-one-2 {
+    fill: #fff;
+  }
+  .instructions-one-3 {
+    clip-path: url(#clip-path);
+  }
+}

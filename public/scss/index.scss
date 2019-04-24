@@ -1,4 +1,5 @@
 
+$brand_primary_colour: #a4c2d8;
 
 section.Banner {
   box-sizing: border-box;
@@ -62,8 +63,8 @@ nav.Nav {
   height: $nav_height;
   position: sticky;
   top: 0px;
-  background: #a4c2d8;
-  box-shadow: 0px 10px 20px rgba(0,0,0,.3), inset 20px 10px 20px #a4c2d8, inset -20px 10px 20px #a4c2d8;
+  background: $brand_primary_colour;
+  box-shadow: 0px 10px 20px rgba(0,0,0,.3), inset 20px 10px 20px $brand_primary_colour, inset -20px 10px 20px $brand_primary_colour;
   ul {
     height: 100%;
     width: 100%;
@@ -116,7 +117,7 @@ nav.Nav {
       flex-direction: row;
       align-items: stretch;
       justify-content: space-between;
-      transition: .15s linear;
+      transition: all .15s linear;
       &.Nav--logo {
         a {
           li {
@@ -159,7 +160,7 @@ nav.Nav {
 }
 
 section.About {
-  background: #a4c2d8;
+  background: $brand_primary_colour;
   // min-height: 100vh;
   padding: 100px 0;
   .About__flex {
@@ -184,6 +185,33 @@ section.About {
   }
 }
 
+
+section.Gameplay {
+  .Gameplay__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+    padding: 50px;
+    background-color: $brand_primary_colour;
+    .Gameplay__grid--one {
+      &.text { grid-column: span 2; }
+      &.image { grid-column: span 1; }
+    }
+    .Gameplay__grid--two {
+      &.text { grid-column: span 2; }
+      &.image { grid-column: span 1; }
+    }
+    .Gameplay__grid--three {
+      &.text { grid-column: span 2; }
+      &.image { grid-column: span 1; }
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+
 @media only screen and (max-width: 850px) {
   nav.Nav {
     ul {
@@ -193,13 +221,16 @@ section.About {
       }
       span.Nav--items {
         flex-direction: column;
-        background: #a4c2d8;
-        box-shadow: 0px 10px 35px rgba(0,0,0,.3), inset 20px 10px 20px #a4c2d8, inset -20px 10px 20px #a4c2d8;
+        background: $brand_primary_colour;
+        box-shadow: 0px 10px 35px rgba(0,0,0,.3), inset 20px 10px 20px $brand_primary_colour, inset -20px 10px 20px $brand_primary_colour;
         position: absolute;
         top: 0;
         right: 0;
         // padding: 20px 0;
+        visibility: none;
         display: none;
+        opacity: 0;
+        transition: visibility 0s, opacity .1s linear;
         li {
           padding: 3vw 6vw;
 
@@ -210,6 +241,8 @@ section.About {
       ul {
         span.Nav--items {
           display: flex;
+          visibility: visible;
+          opacity: 1;
         }
         .Nav__toggle__icon {
 

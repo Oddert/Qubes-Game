@@ -11,3 +11,27 @@ html, body, section {
   height: 100%; }
   .qubes-logo-svg .qubes-logo-1 {
     fill: #fff; }
+
+svg .instructions-three-1 {
+  fill: none; }
+
+svg .instructions-three-2 {
+  fill: #fff; }
+
+svg .instructions-three-3 {
+  clip-path: url(#clip-path); }
+
+svg .instructions-two-1 {
+  fill: none; }
+
+svg .instructions-two-2 {
+  clip-path: url(#clip-path); }
+
+svg .instructions-one-1 {
+  fill: none; }
+
+svg .instructions-one-2 {
+  fill: #fff; }
+
+svg .instructions-one-3 {
+  clip-path: url(#clip-path); }
