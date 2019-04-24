@@ -23,7 +23,7 @@ section.Banner {
   section.Banner .Banner__text {
     height: 50px;
     background: linear-gradient(0deg, white, rgba(255, 255, 255, 0.5));
-    padding: 7vh 5vh 7vh 50px;
+    padding: 9vh 5vh 9vh 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,12 +55,46 @@ nav.Nav {
     align-items: stretch;
     justify-content: space-between;
     transition: .1s linear; }
+    nav.Nav ul .Nav__toggle {
+      color: green;
+      border: none;
+      background: rgba(0, 0, 0, 0);
+      cursor: pointer;
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      height: 50px;
+      width: 50px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: center; }
+      nav.Nav ul .Nav__toggle .Nav__toggle__icon {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-around;
+        justify-content: center; }
+        nav.Nav ul .Nav__toggle .Nav__toggle__icon .Nav__toggle--bar {
+          height: 3px;
+          width: 30px;
+          background: #34495e;
+          background: #ecf0f1;
+          border-radius: 2px;
+          margin: 3px 10px;
+          transition: .3s linear; }
     nav.Nav ul span {
       display: flex;
       flex-direction: row;
       align-items: stretch;
-      justify-content: space-between; }
-      nav.Nav ul span.Nav__logo li a {
+      justify-content: space-between;
+      transition: .15s linear; }
+      nav.Nav ul span.Nav--logo li a {
         font-weight: 700;
         font-size: 22px; }
       nav.Nav ul span li {
@@ -68,7 +102,7 @@ nav.Nav {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0 30px;
+        padding: 0 3vw;
         cursor: pointer;
         transition: .1s linear; }
         nav.Nav ul span li a {
@@ -94,3 +128,29 @@ section.About {
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); }
       section.About .About__flex .About__flex__section.text {
         padding: 100px; }
+
+@media only screen and (max-width: 850px) {
+  nav.Nav ul .Nav__toggle {
+    color: red;
+    display: flex; }
+  nav.Nav ul span.Nav--items {
+    flex-direction: column;
+    background: #a4c2d8;
+    box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.3), inset 20px 10px 20px #a4c2d8, inset -20px 10px 20px #a4c2d8;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none; }
+    nav.Nav ul span.Nav--items li {
+      padding: 3vw 6vw; }
+  nav.Nav.open ul span.Nav--items {
+    display: flex; }
+  nav.Nav.open ul .Nav__toggle__icon .Nav__toggle--bar {
+    margin-top: 0;
+    margin-bottom: 0; }
+    nav.Nav.open ul .Nav__toggle__icon .Nav__toggle--bar.top {
+      transform: translate(0, 100%) rotate(-45deg); }
+    nav.Nav.open ul .Nav__toggle__icon .Nav__toggle--bar.middle {
+      opacity: 0; }
+    nav.Nav.open ul .Nav__toggle__icon .Nav__toggle--bar.bottom {
+      transform: translate(0, -100%) rotate(45deg); } }

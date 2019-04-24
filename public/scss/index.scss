@@ -36,7 +36,7 @@ section.Banner {
     height: 50px;
     background: linear-gradient(0deg, rgba(255,255,255, 1), rgba(255,255,255, .5));
     // transform: translate(0%, -100%);
-    padding: 7vh 5vh 7vh 50px;
+    padding: 9vh 5vh 9vh 50px;
     display: flex;
     flex-direction: column;
     // align-items: center;
@@ -58,7 +58,8 @@ section.Banner {
 }
 
 nav.Nav {
-  height: 50px;
+  $nav_height: 50px;
+  height: $nav_height;
   position: sticky;
   top: 0px;
   background: #a4c2d8;
@@ -73,12 +74,50 @@ nav.Nav {
     align-items: stretch;
     justify-content: space-between;
     transition: .1s linear;
+    .Nav__toggle {
+      color: green;
+      border: none;
+      background: rgba(0,0,0,0);
+      cursor: pointer;
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      height: $nav_height;
+      width: $nav_height;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: center;
+      .Nav__toggle__icon {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-around;
+        justify-content: center;
+        .Nav__toggle--bar {
+          height: 3px;
+          width: 30px;
+          background: #34495e;
+          background: #ecf0f1;
+          border-radius: 2px;
+          margin: 3px 10px;
+          transition: .3s linear;
+          // margin: 7px 4px;
+        }
+      }
+    }
     span {
       display: flex;
       flex-direction: row;
       align-items: stretch;
       justify-content: space-between;
-      &.Nav__logo {
+      transition: .15s linear;
+      &.Nav--logo {
         li {
           a {
             font-weight: 700;
@@ -91,7 +130,7 @@ nav.Nav {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0 30px;
+        padding: 0 3vw;
         cursor: pointer;
         transition: .1s linear;
         a {
@@ -128,6 +167,57 @@ section.About {
       }
       &.text {
         padding: 100px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  nav.Nav {
+    ul {
+      .Nav__toggle {
+        color: red;
+        display: flex;
+      }
+      span.Nav--items {
+        flex-direction: column;
+        background: #a4c2d8;
+        box-shadow: 0px 10px 35px rgba(0,0,0,.3), inset 20px 10px 20px #a4c2d8, inset -20px 10px 20px #a4c2d8;
+        position: absolute;
+        top: 0;
+        right: 0;
+        // padding: 20px 0;
+        display: none;
+        li {
+          padding: 3vw 6vw;
+
+        }
+      }
+    }
+    &.open {
+      ul {
+        span.Nav--items {
+          display: flex;
+        }
+        .Nav__toggle__icon {
+
+          .Nav__toggle--bar {
+            margin-top:0;
+            margin-bottom: 0;
+            &.top {
+              // transform: translate(-8px, 7px) rotate(-45deg);
+              transform: translate(0, 100%) rotate(-45deg);
+            }
+            &.middle {
+              // display: none;
+              opacity: 0;
+            }
+            &.bottom {
+              // transform: translate(-8px, -8px) rotate(45deg);
+              transform: translate(0, -100%) rotate(45deg);
+            }
+          }
+        }
       }
     }
   }
