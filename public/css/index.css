@@ -94,28 +94,30 @@ nav.Nav {
       align-items: stretch;
       justify-content: space-between;
       transition: .15s linear; }
-      nav.Nav ul span.Nav--logo li a {
+      nav.Nav ul span.Nav--logo a li {
         display: flex;
         align-items: center;
         font-weight: 700;
         font-size: 22px; }
-        nav.Nav ul span.Nav--logo li a .qubes-logo-svg {
+        nav.Nav ul span.Nav--logo a li .qubes-logo-svg {
           height: 25px;
           height: 22px;
           margin-right: 2px; }
-      nav.Nav ul span li {
-        list-style-type: none;
+      nav.Nav ul span.Nav--items.invert {
+        transform: translate(0, -100%); }
+      nav.Nav ul span a {
+        text-decoration: none;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 0 3vw;
         cursor: pointer;
         transition: .1s linear; }
-        nav.Nav ul span li a {
+        nav.Nav ul span a li {
+          list-style-type: none;
           color: #fff;
-          font-size: 18px;
-          text-decoration: none; }
-        nav.Nav ul span li:hover {
+          font-size: 18px; }
+        nav.Nav ul span a:hover {
           background: #70a0c2; }
 
 section.About {
