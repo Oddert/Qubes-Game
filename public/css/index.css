@@ -58,6 +58,7 @@ nav.Nav {
     nav.Nav ul .Nav__toggle {
       color: green;
       border: none;
+      display: none;
       background: rgba(0, 0, 0, 0);
       cursor: pointer;
       display: none;
@@ -68,7 +69,6 @@ nav.Nav {
       height: 50px;
       width: 50px;
       padding: 0;
-      display: flex;
       flex-direction: column;
       align-items: stretch;
       justify-content: center; }
