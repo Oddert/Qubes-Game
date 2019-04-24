@@ -136,27 +136,37 @@ section.About {
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); }
       section.About .About__flex .About__flex__section.text {
         padding: 100px; }
+        section.About .About__flex .About__flex__section.text h2 {
+          color: #ecf0f1;
+          font-size: 36px; }
+        section.About .About__flex .About__flex__section.text p.first {
+          font-weight: bold; }
 
-section.Gameplay .Gameplay__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 50px;
-  padding: 50px;
-  background-color: #a4c2d8; }
-  section.Gameplay .Gameplay__grid .Gameplay__grid--one.text {
-    grid-column: span 2; }
-  section.Gameplay .Gameplay__grid .Gameplay__grid--one.image {
-    grid-column: span 1; }
-  section.Gameplay .Gameplay__grid .Gameplay__grid--two.text {
-    grid-column: span 2; }
-  section.Gameplay .Gameplay__grid .Gameplay__grid--two.image {
-    grid-column: span 1; }
-  section.Gameplay .Gameplay__grid .Gameplay__grid--three.text {
-    grid-column: span 2; }
-  section.Gameplay .Gameplay__grid .Gameplay__grid--three.image {
-    grid-column: span 1; }
-  section.Gameplay .Gameplay__grid img {
-    max-width: 100%; }
+section.Gameplay {
+  color: #ecf0f1; }
+  section.Gameplay .Gameplay__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+    padding: 50px;
+    background-color: #a4c2d8; }
+    section.Gameplay .Gameplay__grid .text h4 {
+      color: #ecf0f1;
+      font-size: 32px; }
+    section.Gameplay .Gameplay__grid .Gameplay__grid--one.text {
+      grid-column: span 2; }
+    section.Gameplay .Gameplay__grid .Gameplay__grid--one.image {
+      grid-column: span 1; }
+    section.Gameplay .Gameplay__grid .Gameplay__grid--two.text {
+      grid-column: span 2; }
+    section.Gameplay .Gameplay__grid .Gameplay__grid--two.image {
+      grid-column: span 1; }
+    section.Gameplay .Gameplay__grid .Gameplay__grid--three.text {
+      grid-column: span 2; }
+    section.Gameplay .Gameplay__grid .Gameplay__grid--three.image {
+      grid-column: span 1; }
+    section.Gameplay .Gameplay__grid img {
+      max-width: 100%; }
 
 @media only screen and (max-width: 850px) {
   nav.Nav ul .Nav__toggle {

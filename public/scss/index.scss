@@ -1,5 +1,6 @@
 
 $brand_primary_colour: #a4c2d8;
+$image_shadow_standard: 10px 10px 20px rgba(0,0,0,0.3);
 
 section.Banner {
   box-sizing: border-box;
@@ -175,11 +176,18 @@ section.About {
         .About__main_image {
           max-width: 100%;
           border-radius: 20px;
-          box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+          box-shadow: $image_shadow_standard;
         }
       }
       &.text {
         padding: 100px;
+        h2 {
+          color: #ecf0f1;
+          font-size: 36px;
+        }
+        p.first {
+          font-weight: bold;
+        }
       }
     }
   }
@@ -187,12 +195,19 @@ section.About {
 
 
 section.Gameplay {
+  color: #ecf0f1;
   .Gameplay__grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 50px;
     padding: 50px;
     background-color: $brand_primary_colour;
+    .text {
+      h4 {
+        color: #ecf0f1;
+        font-size: 32px;
+      }
+    }
     .Gameplay__grid--one {
       &.text { grid-column: span 2; }
       &.image { grid-column: span 1; }
@@ -207,6 +222,7 @@ section.Gameplay {
     }
     img {
       max-width: 100%;
+      // box-shadow: $image_shadow_standard;
     }
   }
 }
