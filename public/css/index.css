@@ -95,8 +95,14 @@ nav.Nav {
       justify-content: space-between;
       transition: .15s linear; }
       nav.Nav ul span.Nav--logo li a {
+        display: flex;
+        align-items: center;
         font-weight: 700;
         font-size: 22px; }
+        nav.Nav ul span.Nav--logo li a .qubes-logo-svg {
+          height: 25px;
+          height: 22px;
+          margin-right: 2px; }
       nav.Nav ul span li {
         list-style-type: none;
         display: flex;

@@ -120,6 +120,13 @@ nav.Nav {
       &.Nav--logo {
         li {
           a {
+            .qubes-logo-svg {
+              height: $nav_height * .5;
+              height: 22px;
+              margin-right: 2px;
+            }
+            display: flex;
+            align-items: center;
             font-weight: 700;
             font-size: 22px;
           }
