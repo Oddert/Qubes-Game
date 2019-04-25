@@ -17,6 +17,7 @@ app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, '/public')))
 
 app.use('/', require('./routes/index.js'))
+app.use('/dev', require('./routes/dev.js'))
 
 const server = app.listen(
   PORT

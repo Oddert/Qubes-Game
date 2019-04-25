@@ -232,6 +232,43 @@ section.Gameplay {
   }
 }
 
+section.Prison {
+  background-image: url('/img/captivated-primary.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  .Prison__grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // grid-template-columns: 1fr 1fr;
+
+    h2 {
+      margin: 0;
+      flex: 1;
+      text-align: center;
+      text-shadow: 0 0 5px rgba(0,0,0,.8);
+    }
+    .Prison__text {
+      padding: 20px;
+      flex: 1;
+      background: rgba(236, 240, 241, .94);
+      p {
+        // color: #ecf0f1;
+        margin: 20px;
+        &.primary {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
 
 @media only screen and (max-width: 850px) {
   nav.Nav {
