@@ -183,10 +183,12 @@ section.Prison {
   align-items: center; }
   section.Prison .Prison__grid {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center; }
     section.Prison .Prison__grid h2 {
       margin: 0;
+      padding: 15px;
       flex: 1;
       text-align: center;
       text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); }
@@ -198,6 +200,30 @@ section.Prison {
         margin: 20px; }
         section.Prison .Prison__grid .Prison__text p.primary {
           font-weight: bold; }
+
+.Onion_Theory .Onion_Theory__diagram .onion-diagram-1 {
+  fill: #ecf0f1; }
+
+.Onion_Theory .Onion_Theory__diagram .onion-diagram-2 {
+  fill: #e06454; }
+
+.Onion_Theory .Onion_Theory__diagram .onion-diagram-3 {
+  font-size: 12px;
+  fill: #231f20;
+  font-family: Segoe UI;
+  font-weight: 700; }
+
+.Onion_Theory .Onion_Theory__diagram .onion-diagram-4 {
+  fill: #b892c0; }
+
+.Onion_Theory .Onion_Theory__diagram .onion-diagram-5 {
+  fill: #3aaad4; }
+
+.Onion_Theory .Onion_Theory__diagram .onion-diagram-6 {
+  fill: #5fc095; }
+
+.Onion_Theory .Onion_Theory__diagram .onion-diagram-7 {
+  fill: #fbb464; }
 
 @media only screen and (max-width: 850px) {
   nav.Nav ul .Nav__toggle {
@@ -228,4 +254,6 @@ section.Prison {
     nav.Nav.open ul .Nav__toggle__icon .Nav__toggle--bar.middle {
       opacity: 0; }
     nav.Nav.open ul .Nav__toggle__icon .Nav__toggle--bar.bottom {
-      transform: translate(0, -100%) rotate(45deg); } }
+      transform: translate(0, -100%) rotate(45deg); }
+  section.Prison .Prison__grid {
+    flex-direction: column; } }

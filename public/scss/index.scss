@@ -244,12 +244,14 @@ section.Prison {
   // justify-content: center;
   .Prison__grid {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     // grid-template-columns: 1fr 1fr;
 
     h2 {
       margin: 0;
+      padding: 15px;
       flex: 1;
       text-align: center;
       text-shadow: 0 0 5px rgba(0,0,0,.8);
@@ -266,6 +268,36 @@ section.Prison {
         }
       }
     }
+  }
+}
+
+.Onion_Theory {
+  .Onion_Theory__diagram {
+    .onion-diagram-1 {
+      fill: #ecf0f1;
+    }
+    .onion-diagram-2 {
+      fill: #e06454;
+    }
+    .onion-diagram-3 {
+      font-size: 12px;
+      fill: #231f20;
+      font-family: Segoe UI;
+      font-weight: 700;
+    }
+    .onion-diagram-4 {
+      fill: #b892c0;
+    }
+    .onion-diagram-5 {
+      fill: #3aaad4;
+    }
+    .onion-diagram-6 {
+      fill: #5fc095;
+    }
+    .onion-diagram-7 {
+      fill: #fbb464;
+    }
+    
   }
 }
 
@@ -322,6 +354,11 @@ section.Prison {
           }
         }
       }
+    }
+  }
+  section.Prison {
+    .Prison__grid {
+      flex-direction: column;
     }
   }
 }
