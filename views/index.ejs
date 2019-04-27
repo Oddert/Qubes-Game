@@ -7,15 +7,15 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/master.css">
     <link rel="stylesheet" href="/css/index.css">
-    <title>Qubes</title>
+    <title><%= game_name %> | Question Cubes</title>
   </head>
   <body>
     <section class="Banner">
       <div class="Banner__image">
-        <img src="/img/qubes-banner-temp.jpg" alt="Qubes Banner Image">
+        <img src="/img/qubes-banner-temp.jpg" alt="<%= game_name %> Banner Image">
       </div>
       <div class="Banner__text">
-        <h1>QUBES</h1>
+        <h1><%= game_name.toUpperCase() %></h1>
         <p>Question Cubes  |  A Constructor for Relationships</p>
       </div>
     </section>
@@ -23,10 +23,8 @@
       <ul>
         <span class="Nav--logo">
           <a href="#">
-            <li title="Qubes Home">
-              <svg class="qubes-logo-svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58.35 62.67">
-                <path class="qubes-logo-1" d="M412.33,311.35c5.75-5.51,8.22-12.13,8.22-20.66A30.45,30.45,0,0,0,417,275.91a24.48,24.48,0,0,0-10.08-10,30.54,30.54,0,0,0-14.78-3.52A31.59,31.59,0,0,0,376.81,266a26,26,0,0,0-10.48,10.4,30.74,30.74,0,0,0-3.73,15.14,28.16,28.16,0,0,0,3.69,14.4,25.48,25.48,0,0,0,10.34,9.87,30.92,30.92,0,0,0,14.74,3.52,34,34,0,0,0,6.71-.65L416.51,325l4.44-2Zm-35.75-14.68a4.56,4.56,0,1,1,4.56-4.56A4.57,4.57,0,0,1,376.58,296.67Zm15.17,0a4.56,4.56,0,1,1,4.56-4.56A4.56,4.56,0,0,1,391.75,296.67Zm14.65,0a4.56,4.56,0,1,1,4.56-4.56A4.56,4.56,0,0,1,406.4,296.67Z" transform="translate(-362.6 -262.36)"/>
-              </svg>
+            <li title="<%= game_name %> Home">
+              <% include ./partials/svg/qubes-logo.svg %>
               ubes
             </li>
           </a>
@@ -47,19 +45,19 @@
                 Prison
             </li>
           </a> -->
-          <a href="#prison_and_family">
+          <a href="#onion_theory">
             <li title="Social Penetration Theory">
-              Social Theory
+              Onion Theory
             </li>
           </a>
-          <a>
+          <a href="Futures">
             <li title="Future development possibilities">
               Futures
             </li>
           </a>
           <!-- <li title="Design Against Crime"><a>DAC</a></li> -->
           <a>
-            <li title="Contact Info">
+            <li title="Contact / Update Info">
               Contact
             </li>
           </a>
@@ -76,13 +74,13 @@
     <section class="About" id="about">
       <div class="About__flex">
         <div class="About__flex__section image">
-          <img src="/img/qubes-contruct-in-play.png" alt="The Qubes game in play" class="About__main_image">
+          <img src="/img/qubes-contruct-in-play.png" alt="The <%= brick_multiple %> game in play" class="About__main_image">
         </div>
         <div class="About__flex__section text">
           <h2>Question Cubes</h2>
-          <p class="first">Qubes is a group stacking game with questions, the culmination of a project designed to build communication and strengthen relationships between incarcerated fathers and their children.</p>
+          <p class="first"><%= game_name %> is a group stacking game with questions, the culmination of a project designed to build communication and strengthen relationships between incarcerated fathers and their children.</p>
           <p>In a time of rising prison population, deteriorating conditions and health, and the host of problems which feed into loops of deprivation and crime.</p>
-          <p>Extending the category of Social Games, Qubes was inspired by Captivated, a project South Denmark University’s Social Games Against Crime team which sought to tackle the same issue of parental alienation in prison.</p>
+          <p>Extending the category of Social Games, <%= game_name %> was inspired by Captivated, a project South Denmark University’s Social Games Against Crime team which sought to tackle the same issue of parental alienation in prison.</p>
           <p><a href="/dev/placeholder">Read more about why Captivated worked here.</a></p>
         </div>
       </div>
@@ -91,7 +89,7 @@
       <h2>Gameplay</h2>
       <div class="Gameplay__grid">
         <div class="Gameplay__grid--one image">
-          <img src="/img/instructions-one.png" alt="Game instructions one, image of hand taking Qube from the stack">
+          <img src="/img/instructions-one.png" alt="Game instructions one, image of hand taking <%= brick_single %> from the stack">
         </div>
         <div class="Gameplay__grid--one text">
           <h4>1) Take</h4>
@@ -99,13 +97,13 @@
         </div>
         <div class="Gameplay__grid--two text">
           <h4>2) Answer</h4>
-          <p>Each brick, called a Qube, has two prompts written on it corresponding to a difficulty scale and level of intimacy intended to be invoked. The player picks a prompt, in one game mode the player answers the prompt themselves, in another you ask the next person and they respond.</p>
+          <p>Each brick, called <%= brick_prefix %> <%= brick_single %>, has two prompts written on it corresponding to a difficulty scale and level of intimacy intended to be invoked. The player picks a prompt, in one game mode the player answers the prompt themselves, in another you ask the next person and they respond.</p>
         </div>
         <div class="Gameplay__grid--two image">
-          <img src="/img/instructions-two.png" alt="Game instructions two, image of someone holding a Qube to considder it's prompt">
+          <img src="/img/instructions-two.png" alt="Game instructions two, image of someone holding <%= brick_prefix %> <%= brick_single %> to considder it's prompt">
         </div>
         <div class="Gameplay__grid--three image">
-          <img src="/img/instructions-three.png" alt="Game instructions three, image of someone placing the Qube bcak on the stack">
+          <img src="/img/instructions-three.png" alt="Game instructions three, image of someone placing the <%= brick_single %> bcak on the stack">
         </div>
         <div class="Gameplay__grid--three text">
           <h4>2) Build</h4>
@@ -123,41 +121,36 @@
           <p>One key area identified as being a major component in this was the role of relationships between incarcerated fathers and their children. Children and adolescents with stronger connections to their parents are far less likely to suffer health issues, do well in school and avoid crime than those who’s relationship breaks down.</p>
           <p>In their younger years, kids will be brought to visit with relatives, as adults they understand the importance of visiting themselves. Its in their teen years that people begin to drift apart and people stop visiting.</p>
           <!-- <p>Captivated was a project led by social designers Eva Knutz and Thomas Markussen of The Social Games against Crime at South Denmark University, which successfully sought to tackle this issue through a Social Game.</p> -->
-          <!-- <p>With the stark differences between Danish and UK prisons and society, Qubes sought to replicate this success and make something uniquely suited to the UK prison system.</p> -->
-          <p>Qubes was designed in response to this issue: <strong>How can we, assuming no radical change in incarceration trends, help incarcerated fathers reconnect and maintain connections with their children on the outside.</strong></p>
+          <!-- <p>With the stark differences between Danish and UK prisons and society, <%= game_name %> sought to replicate this success and make something uniquely suited to the UK prison system.</p> -->
+          <p><%= game_name %> was designed in response to this issue: <strong>How can we, assuming no radical change in incarceration trends, help incarcerated fathers reconnect and maintain connections with their children on the outside.</strong></p>
         </div>
       </div>
     </section>
     <section class="Onion_Theory" id="onion_theory">
-      <h2>Social Penetration Theory | The Onion Theory</h2>
-      <div class="">
+      <div class="Onion_Theory__head">
+        <h2>Social Penetration Theory | The Onion Theory</h2>
         <p>Social Penetration Theory, often referred to as The Onion Theory, is a theory of interpersonal communication and relationship that seeks to describe how relationships move from weak and relatively shallow, to deeper and more intimate connections.</p>
         <p>Onion theory proposes that relationship development occurs primarily thorough self-disclosure and intentionally revealing personal information. Through this, relationships move between ‘layers’ of deepness or intimacy. Likewise, as individuals grow apart, they move ‘back up’ through the layers as the personal information they once shared is no longer accurate / meaningful.</p>
         <p>The metaphor of an onion is used to describe these levels and the ‘jumping’ between layers that occurs.</p>
-        <div class="Onion_Theory__diagram">
-          <svg class="onion-diagram" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400.51 388.28">
-            <path class="onion-diagram-1" d="M546.32,55.25c-107.22,0-194.14,86.92-194.14,194.14S439.1,443.53,546.32,443.53s194.14-86.92,194.14-194.14H546.32V55.25Z" transform="translate(-352.18 -55.25)"/>
-            <path class="onion-diagram-2" d="M546.32,87.52A162.11,162.11,0,1,0,708.43,249.63H546.32V87.52Z" transform="translate(-352.18 -55.25)"/>
-            <text class="onion-diagram-3" transform="translate(208.52 12.36)">1) Biographical Data<tspan x="0" y="14.4">(Age, Gende</tspan><tspan x="67.19" y="14.4">r</tspan><tspan x="70.69" y="14.4">, Name)</tspan></text>
-            <text class="onion-diagram-3" transform="translate(208.52 45.43)">2) P<tspan x="20.96" y="0">r</tspan><tspan x="25.29" y="0">efe</tspan><tspan x="42.18" y="0">r</tspan><tspan x="46.52" y="0">ences </tspan><tspan x="0" y="14.4">(clothes, food, music)</tspan></text>
-            <text class="onion-diagram-3" transform="translate(206.66 84.01)">3) G<tspan x="22.31" y="0">o</tspan><tspan x="29.34" y="0">als and Aspirations</tspan></text>
-            <text class="onion-diagram-3" transform="translate(208.52 109.7)">4) <tspan x="14.2" y="0">R</tspan><tspan x="21.35" y="0">eligious and Spiritual </tspan><tspan x="0" y="14.4">Convictions</tspan></text>
-            <text class="onion-diagram-3" transform="translate(208.52 148.27)">5) Deep Fea<tspan x="64.5" y="0">r</tspan><tspan x="69.02" y="0">s and </tspan><tspan x="101.29" y="0">F</tspan><tspan x="106.91" y="0">antasies</tspan></text>
-            <text class="onion-diagram-3" transform="translate(208.52 181.18)">6) Concept <tspan x="62.48" y="0">o</tspan><tspan x="69.45" y="0">f Self</tspan></text>
-            <rect class="onion-diagram-4" x="193.14" y="174.49" width="8.5" height="8.5"/>
-            <rect class="onion-diagram-5" x="193.14" y="141.58" width="8.5" height="8.5"/>
-            <rect class="onion-diagram-6" x="193.14" y="109.45" width="8.5" height="8.5"/>
-            <rect class="onion-diagram-7" x="193.14" y="77.32" width="8.5" height="8.5"/>
-            <rect class="onion-diagram-2" x="193.14" y="45.19" width="8.5" height="8.5"/>
-            <rect class="onion-diagram-1" x="193.14" y="12.89" width="8.5" height="8.5"/>
-            <path class="onion-diagram-7" d="M546.32,119.55A130.08,130.08,0,1,0,676.4,249.63H546.32V119.55Z" transform="translate(-352.18 -55.25)"/>
-            <path class="onion-diagram-6" d="M546.32,151.58a98,98,0,1,0,98,98h-98v-98Z" transform="translate(-352.18 -55.25)"/>
-            <path class="onion-diagram-5" d="M546.32,184a65.62,65.62,0,1,0,65.62,65.62H546.32V184Z" transform="translate(-352.18 -55.25)"/>
-            <path class="onion-diagram-4" d="M546.32,216a33.59,33.59,0,1,0,33.59,33.59H546.32V216Z" transform="translate(-352.18 -55.25)"/>
-          </svg>
-        </div>
-        <p>Qubes uses this model in relation to building and strengthening relationships. Its questions (by colour coded blocks) are ordered on where they fall on this superficial-deep scale, superficial questions receive few points while deeper questions have more.</p>
+      </div>
+      <div class="Onion_Theory__diagram">
+        <% include ./partials/svg/onion-diagram.svg %>
+      </div>
+      <div class="Onion_Theory__foot">
+        <p><%= game_name %> uses the Onion Theory as a method of promoting the building and strengthening relationships.</p>
+        <p>Its questions are ordered with diffirent colours and points by where they fall on this superficial-deep scale, superficial questions receive few points while deeper questions have more.</p>
         <p>This balance of physical tension, points motivating players to tackle more difficult subjects, allows the gameplay to prompt users to move between them as necessary.</p>
+      </div>
+    </section>
+    <section class="Futures">
+      <div class="Futures__grid">
+        <div class="Futures__grid__title">
+          <img src="/img/qubes-logo-variant-arrow__white.png" alt="<%= game_name %> logo with an arrow">
+          <h2>Futures.</h2>
+        </div>
+        <div class="Futures__grid__text">
+
+        </div>
       </div>
     </section>
     <section style="height: 300vh; background: #3e3e3e;">
