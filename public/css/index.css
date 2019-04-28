@@ -293,7 +293,7 @@ section.Futures {
       flex: 1;
       position: absolute;
       bottom: 0;
-      transform: translateY(50%);
+      transform: translateY(225px);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -302,8 +302,34 @@ section.Futures {
         background: #fff;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
         border-radius: 20px;
-        padding: 50px 100px;
+        padding: 30px 70px;
         width: 60%; }
+      section.Futures .Futures__grid .Futures__grid__text .Futures__grid__text--bullet-list {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        section.Futures .Futures__grid .Futures__grid__text .Futures__grid__text--bullet-list li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          padding: 10px;
+          color: #ecf0f1;
+          text-shadow: 0 0 3px rgba(0, 0, 0, 0.9); }
+          section.Futures .Futures__grid .Futures__grid__text .Futures__grid__text--bullet-list li:nth-child(1) {
+            background: #e06454;
+            border-radius: 20px 0 0 0; }
+          section.Futures .Futures__grid .Futures__grid__text .Futures__grid__text--bullet-list li:nth-child(2) {
+            background: #fbb464; }
+          section.Futures .Futures__grid .Futures__grid__text .Futures__grid__text--bullet-list li:nth-child(3) {
+            background: #5fc095; }
+          section.Futures .Futures__grid .Futures__grid__text .Futures__grid__text--bullet-list li:nth-child(4) {
+            background: #3aaad4; }
+          section.Futures .Futures__grid .Futures__grid__text .Futures__grid__text--bullet-list li:nth-child(5) {
+            background: #b892c0; }
+          section.Futures .Futures__grid .Futures__grid__text .Futures__grid__text--bullet-list li:nth-child(6) {
+            border-radius: 0 0 20px 0;
+            background: #1bbc9b; }
 
 @media only screen and (max-width: 850px) {
   nav.Nav ul .Nav__toggle {
