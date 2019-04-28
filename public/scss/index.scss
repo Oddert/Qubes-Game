@@ -428,15 +428,16 @@ section.Futures {
         // overflow-y: auto;
         display: flex;
         flex-direction: row;
-        span, li {
+        span {
           flex: 1;
+          min-width: 40%;
         }
       }
       .Futures__grid__text--bullet-list {
         margin: 10px 0;
         list-style-type: none;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         li {
           display: flex;
           align-items: center;
@@ -482,13 +483,13 @@ section.Contact {
     // background: tomato;
     padding: 100px;
     display: flex;
+    align-items: flex-start;
     text-align: center;
     .Contact__grid__info {
       flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      border-right: 1px solid #2d3e50;
     }
     .Contact__grid__updates {
       flex: 1;
@@ -504,6 +505,15 @@ section.Contact {
     }
   }
 }
+
+// Input box
+// #DAC
+//  -Link
+//  -CSM adress & map
+//  -Email button
+//  -Phone
+// Share buttons
+//
 
 
 @media only screen and (max-width: 850px) {
@@ -563,6 +573,46 @@ section.Contact {
   section.Prison {
     .Prison__grid {
       flex-direction: column;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 1000px) {
+  section.Futures {
+    .Futures__grid {
+      .Futures__grid__title {
+        margin-top: 10px;
+        h2 {
+          margin: 0;
+        }
+      }
+      .Futures__grid__text {
+        .Futures__grid__text--inner {
+          flex-direction: column;
+          span {
+
+          }
+          ul {
+
+          }
+        }
+      }
+    }
+  }
+  section.Contact {
+    padding: 100vh 0 30vh 0;
+    .Contact__grid {
+
+      .Contact__grid__info {
+
+      }
+      .Contact__grid__updates {
+
+        hr {
+
+        }
+      }
     }
   }
 }
