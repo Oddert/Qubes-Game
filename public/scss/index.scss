@@ -207,6 +207,8 @@ section.About {
       }
       &.text {
         padding: 100px;
+        font-size: 16px;
+        line-height: 26px;
         p.first {
           font-weight: bold;
         }
@@ -289,6 +291,8 @@ section.Prison {
       p {
         // color: #ecf0f1;
         margin: 20px;
+        font-size: 16px;
+        line-height: 26px;
         &.primary {
           font-weight: bold;
         }
@@ -309,6 +313,8 @@ section.Prison {
     }
     p {
       font-size: 20px;
+      font-size: 16px;
+      line-height: 26px;
     }
     margin: 6vw 10vw;
     padding: 50px;
@@ -328,7 +334,8 @@ section.Prison {
     font-weight: bold;
     text-align: center;
     p {
-      font-size: 20px;
+      font-size: 16px;
+      line-height: 26px;
     }
   }
   .Onion_Theory__diagram {
@@ -406,6 +413,10 @@ section.Futures {
       align-items: center;
       justify-content: center;
       width: 100%;
+      p, li {
+        font-size: 16px;
+        line-height: 26px;
+      }
       .Futures__grid__text--inner {
         background: #fff;
         box-shadow: $image_shadow_standard;
@@ -415,6 +426,11 @@ section.Futures {
         max-width: 60%;
         // max-height: 50vh;
         // overflow-y: auto;
+        display: flex;
+        flex-direction: row;
+        span, li {
+          flex: 1;
+        }
       }
       .Futures__grid__text--bullet-list {
         margin: 10px 0;

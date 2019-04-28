@@ -150,13 +150,15 @@
         </div>
         <div class="Futures__grid__text">
           <div class="Futures__grid__text--inner">
-            <p>When South Denmark University’s Social Games Against Crime team developed Captivated they did so over 3 years with full research funding from TrygFonden and were able to design and test a complete outcome currently being used in the Danish prison system.</p>
-            <p>Qubes was developed without funding in under 6 months.</p>
-            <p>As such, while the outcome is functional, it did not have access to some of the research and professional links needed to make it air-tight. Design Against Crime is in the process of perusing a research grant in order to take Qubes to the next level. This would involve: </p>
+            <span>
+              <p>When South Denmark University’s Social Games Against Crime team developed Captivated they did so over 3 years with full research funding from TrygFonden and were able to design and test a complete outcome currently being used in the Danish prison system.</p>
+              <p>Qubes was developed without funding in under 6 months.</p>
+              <p>As such, while the outcome is functional, it did not have access to some of the research and professional links needed to make it air-tight. Design Against Crime is in the process of perusing a research grant in order to take Qubes to the next level. This would involve: </p>
+            </span>
             <ul class="Futures__grid__text--bullet-list">
               <li>1) Working more with children and young adults of the affected groups.</li>
               <li>2) Building new prompts from the ground up with child-psychologists.</li>
-              <li>3) Investigating the possibility of manufacturing the unit in prison and for continuous question input from inmates and families via this.</li>
+              <li>3) Investigating the possibility of manufacturing the unit in prison and inmate customisation.</li>
               <li>4) Trial deployments and evaluations in prison working with the MOJ.</li>
               <li>5) Physical design changes to optimise materials, packaging and branding.</li>
               <li>6) Investigating the possibility of ‘versions’ suited for specific contexts and user needs.</li>
@@ -173,7 +175,7 @@
         <div class="Contact__grid__updates">
           <h2>Updates</h2>
           <hr />
-          <% if (!!updates) { %>
+          <% if (updates) { %>
             <% updates.forEach(each => { %>
               <div class="Update">
                 <h3><%= each.title %></h3>
