@@ -379,10 +379,12 @@ section.Futures {
   .Futures__grid {
     display: flex;
     align-items: center;
+    align-items: flex-start;
     height: 100%;
     position: absolute;
     width: 100%;
     .Futures__grid__title {
+      margin-top: 50px;
       flex: 1;
       display: flex;
       align-items: center;
@@ -399,7 +401,7 @@ section.Futures {
       flex: 1;
       position: absolute;
       bottom: 0;
-      transform: translateY(225px);
+      transform: translateY(50%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -407,12 +409,15 @@ section.Futures {
       .Futures__grid__text--inner {
         background: #fff;
         box-shadow: $image_shadow_standard;
+        box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
         border-radius: 20px;
-        padding: 30px 70px;
-        width: 60%;
-
+        padding: 15px 70px;
+        max-width: 60%;
+        // max-height: 50vh;
+        // overflow-y: auto;
       }
       .Futures__grid__text--bullet-list {
+        margin: 10px 0;
         list-style-type: none;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -446,6 +451,39 @@ section.Futures {
             background: #1bbc9b;
           }
         }
+      }
+    }
+  }
+}
+
+section.Contact {
+  background: $brand_primary_colour;
+  min-height: 100vh;
+  padding: 50vh 0;
+
+  .Contact__grid {
+    box-shadow: $image_shadow_standard;
+    // background: tomato;
+    padding: 100px;
+    display: flex;
+    text-align: center;
+    .Contact__grid__info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-right: 1px solid #2d3e50;
+    }
+    .Contact__grid__updates {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-left: 1px solid #2d3e50;
+      position: relative;
+      hr {
+        width: 80%;
+        border: 1px solid #ecf0f1;
       }
     }
   }

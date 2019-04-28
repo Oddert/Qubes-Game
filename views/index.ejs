@@ -50,13 +50,13 @@
               Onion Theory
             </li>
           </a>
-          <a href="Futures">
+          <a href="#futures">
             <li title="Future development possibilities">
               Futures
             </li>
           </a>
           <!-- <li title="Design Against Crime"><a>DAC</a></li> -->
-          <a>
+          <a href="#contact">
             <li title="Contact / Update Info">
               Contact
             </li>
@@ -142,7 +142,7 @@
         <p>This balance of physical tension, points motivating players to tackle more difficult subjects, allows the gameplay to prompt users to move between them as necessary.</p>
       </div>
     </section>
-    <section class="Futures">
+    <section class="Futures" id="futures">
       <div class="Futures__grid">
         <div class="Futures__grid__title">
           <img src="/img/qubes-logo-variant-arrow__white.png" alt="<%= game_name %> logo with an arrow">
@@ -162,6 +162,28 @@
               <li>6) Investigating the possibility of ‘versions’ suited for specific contexts and user needs.</li>
             </ul>
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="Contact" id="contact">
+      <div class="Contact__grid">
+        <div class="Contact__grid__info">
+          <h2>Contact</h2>
+        </div>
+        <div class="Contact__grid__updates">
+          <h2>Updates</h2>
+          <hr />
+          <% if (!!updates) { %>
+            <% updates.forEach(each => { %>
+              <div class="Update">
+                <h3><%= each.title %></h3>
+                <img src="<%= each.header.src %>" alt="<%= each.header.alt %>">
+                <p><%= each.preview %></p>
+              </div>
+            <% }) %>
+          <% } else { %>
+            <p>Check back here for news and updates</p>
+          <% } %>
         </div>
       </div>
     </section>

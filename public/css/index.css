@@ -281,10 +281,12 @@ section.Futures {
   section.Futures .Futures__grid {
     display: flex;
     align-items: center;
+    align-items: flex-start;
     height: 100%;
     position: absolute;
     width: 100%; }
     section.Futures .Futures__grid .Futures__grid__title {
+      margin-top: 50px;
       flex: 1;
       display: flex;
       align-items: center;
@@ -298,7 +300,7 @@ section.Futures {
       flex: 1;
       position: absolute;
       bottom: 0;
-      transform: translateY(225px);
+      transform: translateY(50%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -306,10 +308,12 @@ section.Futures {
       section.Futures .Futures__grid .Futures__grid__text .Futures__grid__text--inner {
         background: #fff;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
         border-radius: 20px;
-        padding: 30px 70px;
-        width: 60%; }
+        padding: 15px 70px;
+        max-width: 60%; }
       section.Futures .Futures__grid .Futures__grid__text .Futures__grid__text--bullet-list {
+        margin: 10px 0;
         list-style-type: none;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
@@ -335,6 +339,32 @@ section.Futures {
           section.Futures .Futures__grid .Futures__grid__text .Futures__grid__text--bullet-list li:nth-child(6) {
             border-radius: 0 0 20px 0;
             background: #1bbc9b; }
+
+section.Contact {
+  background: #a4c2d8;
+  min-height: 100vh;
+  padding: 50vh 0; }
+  section.Contact .Contact__grid {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    padding: 100px;
+    display: flex;
+    text-align: center; }
+    section.Contact .Contact__grid .Contact__grid__info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-right: 1px solid #2d3e50; }
+    section.Contact .Contact__grid .Contact__grid__updates {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-left: 1px solid #2d3e50;
+      position: relative; }
+      section.Contact .Contact__grid .Contact__grid__updates hr {
+        width: 80%;
+        border: 1px solid #ecf0f1; }
 
 @media only screen and (max-width: 850px) {
   nav.Nav ul .Nav__toggle {
