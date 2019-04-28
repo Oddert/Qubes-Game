@@ -173,9 +173,10 @@ section.Gameplay {
     padding: 50px; }
     section.Gameplay .Gameplay__grid .text h4 {
       color: #ecf0f1;
-      font-size: 32px; }
+      font-size: 32px;
+      font-size: 1.9vw; }
     section.Gameplay .Gameplay__grid p {
-      font-size: 1.5vw; }
+      font-size: 1.3vw; }
     section.Gameplay .Gameplay__grid .Gameplay__grid--one.text {
       grid-column: span 2; }
     section.Gameplay .Gameplay__grid .Gameplay__grid--one.image {
@@ -234,6 +235,8 @@ section.Prison {
     background: rgba(164, 194, 216, 0.9); }
     .Onion_Theory .Onion_Theory__head h2 {
       margin: 0; }
+    .Onion_Theory .Onion_Theory__head p {
+      font-size: 20px; }
   .Onion_Theory .Onion_Theory__foot {
     margin: 6vw 10vw;
     padding: 50px;
@@ -242,6 +245,8 @@ section.Prison {
     background: rgba(164, 194, 216, 0.9);
     font-weight: bold;
     text-align: center; }
+    .Onion_Theory .Onion_Theory__foot p {
+      font-size: 20px; }
   .Onion_Theory .Onion_Theory__diagram .onion-diagram {
     max-height: calc(80vh - 50px);
     max-width: 100vw; }
@@ -313,9 +318,9 @@ section.Futures {
           align-items: center;
           justify-content: center;
           text-align: center;
-          padding: 10px;
+          padding: 20px;
           color: #ecf0f1;
-          text-shadow: 0 0 3px rgba(0, 0, 0, 0.9); }
+          text-shadow: 0 0 4px black; }
           section.Futures .Futures__grid .Futures__grid__text .Futures__grid__text--bullet-list li:nth-child(1) {
             background: #e06454;
             border-radius: 20px 0 0 0; }

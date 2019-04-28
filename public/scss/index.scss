@@ -233,10 +233,11 @@ section.Gameplay {
       h4 {
         color: #ecf0f1;
         font-size: 32px;
+        font-size: 1.9vw;
       }
     }
     p {
-      font-size: 1.5vw;
+      font-size: 1.3vw;
     }
     .Gameplay__grid--one {
       &.text { grid-column: span 2; }
@@ -306,6 +307,9 @@ section.Prison {
     h2 {
       margin: 0;
     }
+    p {
+      font-size: 20px;
+    }
     margin: 6vw 10vw;
     padding: 50px;
     box-shadow: 0px 0px 30px rgba(0,0,0,.3);
@@ -323,6 +327,9 @@ section.Prison {
     background: rgba(164,194,216, .9);
     font-weight: bold;
     text-align: center;
+    p {
+      font-size: 20px;
+    }
   }
   .Onion_Theory__diagram {
     .onion-diagram {
@@ -414,10 +421,10 @@ section.Futures {
           align-items: center;
           justify-content: center;
           text-align: center;
-          padding: 10px;
+          padding: 20px;
           // border-radius: 20px;
           color: #ecf0f1;
-          text-shadow: 0 0 3px rgba(0,0,0,.9);
+          text-shadow: 0 0 4px rgba(0,0,0,1);
           &:nth-child(1) {
             background: $qube_level_1;
             border-radius: 20px 0 0 0;
