@@ -82,6 +82,7 @@ nav.Nav {
   top: 0px;
   background: $brand_primary_colour;
   box-shadow: 0px 10px 20px rgba(0,0,0,.3), inset 20px 10px 20px $brand_primary_colour, inset -20px 10px 20px $brand_primary_colour;
+  z-index: 1;
   ul {
     height: 100%;
     width: 100%;
@@ -372,6 +373,8 @@ section.Futures {
     display: flex;
     align-items: center;
     height: 100%;
+    position: absolute;
+    width: 100%;
     .Futures__grid__title {
       flex: 1;
       display: flex;
@@ -387,7 +390,21 @@ section.Futures {
     }
     .Futures__grid__text {
       flex: 1;
+      position: absolute;
+      bottom: 0;
+      transform: translateY(50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      .Futures__grid__text--inner {
+        background: #fff;
+        box-shadow: $image_shadow_standard;
+        border-radius: 20px;
+        padding: 50px 100px;
+        width: 60%;
 
+      }
     }
   }
 }
