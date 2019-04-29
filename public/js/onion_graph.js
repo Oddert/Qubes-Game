@@ -21,7 +21,7 @@ const svg = d3.select('#Onion_Theory__diagram')
   .append('svg')
   .attr('width', canvasWidth)
   .attr('height', canvasHeight)
-  .style('border', '1px solid red')
+  // .style('border', '1px solid red')
 
 const arcBsck = d3.arc()
   .outerRadius(radius)
@@ -130,6 +130,31 @@ const ringFive = svg.append('path')
   // .on('mouseout', () => highlight(5, false))
 
 // svg.on('mouseout', () => highlight(5, false))
+
+const textOne = svg.append('text')
+  .text('1) Likes and Dislikes')
+  .attr('x', (canvasWidth / 2) + 20)
+  .attr('y', (canvasHeight / 2) - (radius - (segmant * 1)) - sectionWidth)
+
+const textTwo = svg.append('text')
+  .text('2) Goals and Aspirations')
+  .attr('x', (canvasWidth / 2) + 20)
+  .attr('y', (canvasHeight / 2) - (radius - (segmant * 2)) - sectionWidth)
+
+const textThree = svg.append('text')
+  .text('3) Religious and Spiritual Convictions')
+  .attr('x', (canvasWidth / 2) + 20)
+  .attr('y', (canvasHeight / 2) - (radius - (segmant * 3)) - sectionWidth)
+
+const textFour = svg.append('text')
+  .text('4) Deap Fears and Fantasies')
+  .attr('x', (canvasWidth / 2) + 20)
+  .attr('y', (canvasHeight / 2) - (radius - (segmant * 4)) - sectionWidth)
+
+const textFive = svg.append('text')
+  .text('5) The Concept of the Self')
+  .attr('x', (canvasWidth / 2) + 20)
+  .attr('y', (canvasHeight / 2) - (radius - (segmant * 5)) - sectionWidth)
 
 let selected = false
 
