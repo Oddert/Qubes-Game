@@ -11,6 +11,7 @@ $qube_level_5: #b892c0;
 h2 {
   color: #ecf0f1;
   font-size: 9vh;
+  line-height: 10vh;
 }
 
 section {
@@ -139,6 +140,7 @@ nav.Nav {
       &.Nav--logo {
         a {
           li {
+            color: #fff;
             .qubes-logo-svg {
               height: $nav_height * .5;
               height: 22px;
@@ -148,6 +150,12 @@ nav.Nav {
             align-items: center;
             font-weight: 700;
             font-size: 22px;
+          }
+          &:nth-child(1):hover li {
+            color: #fff;
+          }
+          &:hover, &:nth-child(1):hover {
+            color: #fff;
           }
         }
       }
@@ -209,6 +217,10 @@ section.About {
         padding: 100px;
         font-size: 16px;
         line-height: 26px;
+        h2 {
+          margin-top: 0;
+
+        }
         p.first {
           font-weight: bold;
         }
@@ -231,15 +243,20 @@ section.Gameplay {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 50px;
     padding: 50px;
+    .image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     .text {
       h4 {
         color: #ecf0f1;
         font-size: 32px;
         font-size: 1.9vw;
       }
-    }
-    p {
-      font-size: 1.3vw;
+      p {
+        font-size: 1.3vw;
+      }
     }
     .Gameplay__grid--one {
       &.text { grid-column: span 2; }
@@ -301,7 +318,7 @@ section.Prison {
   }
 }
 
-.Onion_Theory {
+section.Onion_Theory {
   padding: 100px 50px;
   background-color: $brand_primary_colour;
   background: url("/img/qubes-layer-background.png");
@@ -570,19 +587,77 @@ section.Contact {
       }
     }
   }
+  section.About {
+    padding: 20px 0;
+    .About__flex {
+      flex-direction: column-reverse;
+      .About__flex__section.text {
+        padding: 30px;
+        text-align: center;
+      }
+      .About__flex__section.image {
+        .About__main_image {
+          width: auto;
+          margin: 0 auto;
+          max-height: 80vh;
+        }
+      }
+    }
+  }
   section.Prison {
     .Prison__grid {
       flex-direction: column;
+      padding: 15px;
+      .Prison__text {
+        margin: 10px;
+        p {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+  section.Onion_Theory {
+    padding: 100px 20px;
+    text-align: center;
+    .Onion_Theory__head {
+      margin: 30px 10px;
+      padding: 20px;
+    }
+    .Onion_Theory__foot {
+      margin: 30px 10px;
+      padding: 20px;
     }
   }
 
 }
 
 @media only screen and (max-width: 1000px) {
+  h2 {
+    font-size: 36px;
+  }
+  section.Gameplay {
+    .Gameplay__grid {
+      padding: 20px;
+      .text {
+        h4 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
   section.Futures {
     .Futures__grid {
       .Futures__grid__title {
-        margin-top: 10px;
+        // margin-top: 10px;
+        img {
+          // max-height: 5vh;
+          height: 50px;
+        }
         h2 {
           margin: 0;
         }
@@ -590,6 +665,9 @@ section.Contact {
       .Futures__grid__text {
         .Futures__grid__text--inner {
           flex-direction: column;
+          z-index: 1;
+          padding: 10px;
+          max-width: 90%;
           span {
 
           }
@@ -597,13 +675,21 @@ section.Contact {
 
           }
         }
+        .Futures__grid__text--bullet-list {
+          padding: 0;
+          li {
+            padding: 10px;
+            font-size: 14px;
+            line-height: 22px;
+          }
+        }
       }
     }
   }
   section.Contact {
-    padding: 100vh 0 30vh 0;
+    padding: 100vh 0 10vh 0;
     .Contact__grid {
-
+      padding: 10px;
       .Contact__grid__info {
 
       }
