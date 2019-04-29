@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="/css/master.css">
     <link rel="stylesheet" href="/css/index.css">
     <title><%= game_name %> | Question Cubes</title>
@@ -135,7 +136,7 @@
         <p>Onion theory proposes that relationship development occurs primarily thorough self-disclosure and intentionally revealing personal information. Through this, relationships move between ‘layers’ of deepness or intimacy. Likewise, as individuals grow apart, they move ‘back up’ through the layers as the personal information they once shared is no longer accurate / meaningful.</p>
         <p>The metaphor of an onion is used to describe these levels and the ‘jumping’ between layers that occurs.</p>
       </div>
-      <div class="Onion_Theory__diagram">
+      <div class="Onion_Theory__diagram" id="Onion_Theory__diagram">
         <% include ./partials/svg/onion-diagram.svg %>
       </div>
       <div class="Onion_Theory__foot">
@@ -196,4 +197,5 @@
     </section>
   </body>
   <script type="text/javascript" src="/js/index.js"></script>
+  <script type="text/javascript" src="/js/onion_graph.js"></script>
 </html>
