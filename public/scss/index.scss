@@ -18,6 +18,10 @@ section {
   box-shadow: inset 0px 10px 20px rgba(0,0,0,.3);
 }
 
+text {
+  font-weight: bold;
+}
+
 section.Banner {
   box-sizing: border-box;
   width: 100%;
@@ -384,7 +388,14 @@ section.Onion_Theory {
     .onion-diagram-7 {
       fill: #fbb464;
     }
-
+    .Onion_Theory__diagram--dynamic {
+      .Onion_Theory__diagram--dynamic__canvas {
+        transition: 2s ease;
+      }
+      .Onion_Theory__diagram--dynamic__ring {
+        cursor: pointer;
+      }
+    }
   }
 }
 

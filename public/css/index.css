@@ -6,6 +6,9 @@ h2 {
 section {
   box-shadow: inset 0px 10px 20px rgba(0, 0, 0, 0.3); }
 
+text {
+  font-weight: bold; }
+
 section.Banner {
   box-sizing: border-box;
   width: 100%;
@@ -286,6 +289,10 @@ section.Onion_Theory {
     fill: #5fc095; }
   section.Onion_Theory .Onion_Theory__diagram .onion-diagram-7 {
     fill: #fbb464; }
+  section.Onion_Theory .Onion_Theory__diagram .Onion_Theory__diagram--dynamic .Onion_Theory__diagram--dynamic__canvas {
+    transition: 2s ease; }
+  section.Onion_Theory .Onion_Theory__diagram .Onion_Theory__diagram--dynamic .Onion_Theory__diagram--dynamic__ring {
+    cursor: pointer; }
 
 section.Futures {
   background: url("/img/qubes-laser.png");
