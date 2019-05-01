@@ -15,9 +15,11 @@ function debounce(func, wait=20, immediate=true) {
   };
 };
 
+let onionSelected = false
+
 function drawOnionGraph () {
-  const canvasWidth = window.innerWidth - 110
-  const canvasHeight = window.innerHeight - 110
+  const canvasWidth = window.innerWidth - 120
+  const canvasHeight = window.innerHeight - 120
 
   const max = (val1, val2) => val2 > val1 ? val2 : val1
   const min = (val1, val2) => val1 < val2 ? val1 : val2
@@ -41,6 +43,10 @@ function drawOnionGraph () {
 
   const canvas = svg.append('g')
     .attr('class', 'Onion_Theory__diagram--dynamic__canvas')
+
+  const description = d3.select('#Onion_Theory__diagram__descriptions')
+
+  description.attr('class', 'Onion_Theory__diagram__descriptions')
 
   const arcBsck = d3.arc()
     .outerRadius(radius)
@@ -146,35 +152,38 @@ function drawOnionGraph () {
 
   const textOne = canvas.append('text')
     .text('1) Likes and Dislikes')
+    .style('font-size', '14px')
     .attr('x', (canvasWidth / 2) + 20)
     .attr('y', (canvasHeight / 2) - (radius - (segmant * 1)) - sectionWidth)
     .on('click', () => select(0))
 
   const textTwo = canvas.append('text')
     .text('2) Goals and Aspirations')
+    .style('font-size', '14px')
     .attr('x', (canvasWidth / 2) + 20)
     .attr('y', (canvasHeight / 2) - (radius - (segmant * 2)) - sectionWidth)
     .on('click', () => select(1))
 
   const textThree = canvas.append('text')
     .text('3) Religious and Spiritual Convictions')
+    .style('font-size', '14px')
     .attr('x', (canvasWidth / 2) + 20)
     .attr('y', (canvasHeight / 2) - (radius - (segmant * 3)) - sectionWidth)
     .on('click', () => select(2))
 
   const textFour = canvas.append('text')
     .text('4) Deap Fears and Fantasies')
+    .style('font-size', '14px')
     .attr('x', (canvasWidth / 2) + 20)
     .attr('y', (canvasHeight / 2) - (radius - (segmant * 4)) - sectionWidth)
     .on('click', () => select(3))
 
   const textFive = canvas.append('text')
     .text('5) The Concept of the Self')
+    .style('font-size', '14px')
     .attr('x', (canvasWidth / 2) + 20)
     .attr('y', (canvasHeight / 2) - (radius - (segmant * 5)) - sectionWidth)
     .on('click', () => select(4))
-
-  let selected = false
 
   function highlight (target, activate) {
     const rings = [ringOne, ringTwo, ringThree, ringFour, ringFive]
@@ -209,18 +218,70 @@ function drawOnionGraph () {
   }
 
   function select (target) {
-    // const rings = [ringOne, ringTwo, ringThree, ringFour, ringFive]
-    // const thisRing = rings.splice(target-1, 1)
+    const rings = [ringOne, ringTwo, ringThree, ringFour, ringFive]
+    const texts = [textOne, textTwo, textThree, textFour, textFive]
+    const thisRing = rings.splice(target-1, 1)
+    // const thisText = texts.splice(target-1, 1)
+
     // console.log(canvasWidth, canvasWidth / 4)
-    // canvas.style('transform', `translate(-${(canvasWidth / 4)}px, ${radius * .1}px)`)
-    // setTimeout(deselect, 3000)
+    // description.attr('class', 'Onion_Theory__diagram__descriptions show')
+    let descDOM = document.querySelector('.Onion_Theory__diagram__descriptions')
+    descDOM.classList.add('show')
+
+    texts.forEach(each => each.style('display', 'none'))
+
+    let canvasSelectOffsetX = canvasWidth / 4
+    let canvasSelectOffsetY = descDOM.scrollHeight > canvasHeight / 2
+      ? (descDOM.scrollHeight - (canvasHeight / 2))
+      : radius * 0
+
+    descDOM.querySelectorAll('li').forEach((each, idx) => idx === target ? each.classList.add('show') : each.classList.remove('show'))
+    canvas.style('transform', `translate(-${canvasSelectOffsetX}px, ${canvasSelectOffsetY}px)`)
+
+    description.style('position', 'absolute')
+      .style('box-sizing', 'border-box')
+      .style('top', `0px`)
+      .style('left', `${(canvasWidth / 4) + 50}px`)
+
+    onionSelected = true
+    // setTimeout(deselect, 6000)
   }
 
   function deselect () {
-    // canvas.style('transform', `translate(0px, 0px)`)
+    const texts = [textOne, textTwo, textThree, textFour, textFive]
+    texts.forEach(each => {
+      each.style('display', null)
+      each.attr('fill', 'black')
+      each.style('opacity', '1')
+    })
+    canvas.style('transform', `translate(0px, 0px)`)
+    description.style('position', 'absolute')
+      .style('top', `0px`)
+      .style('left', `${(canvasWidth / 4) + 50}px`)
+      let descDOM = document.querySelector('.Onion_Theory__diagram__descriptions')
+      descDOM.classList.remove('show')
+    onionSelected = false
   }
 }
 
 drawOnionGraph()
 
+function handleScrollCheck () {
+  const svg = document.getElementById('Onion_Theory__diagram__container')
+  const rect = svg.getBoundingClientRect()
+  // console.log(svg.offsetHeight, rect.top)
+  if (rect.top < 0) {
+    if (-rect.top > svg.offsetHeight && onionSelected) {
+      onionSelected = false
+      drawOnionGraph()
+    }
+  } else {
+    if (rect.top > svg.offsetHeight && onionSelected) {
+      onionSelected = false
+      drawOnionGraph()
+    }
+  }
+}
+
 window.addEventListener('resize', debounce(drawOnionGraph))
+window.addEventListener('scroll', debounce(handleScrollCheck))

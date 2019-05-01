@@ -360,7 +360,36 @@ section.Onion_Theory {
     }
   }
   .Onion_Theory__diagram {
-    .Onion_Theory__diagram__descriptions {}
+    position: relative;
+    .Onion_Theory__diagram__descriptions {
+      // border: 1px dashed tomato;
+      max-width: 70vw;
+      background: rgba(164,194,216, .9);
+      display: none;
+      box-sizing: border-box;
+      .Onion_Theory__diagram__descriptions__list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+          display: none;
+          flex-direction: column;
+          h3 {
+            font-size: 14px;
+          }
+          p {
+            font-size: 12px;
+          }
+
+          &.show {
+            display: flex;
+          }
+        }
+      }
+      &.show {
+        display: flex;
+      }
+    }
     .Onion_Theory__diagram__container {
       .onion-diagram-static {
         max-height: calc(80vh - 50px);
