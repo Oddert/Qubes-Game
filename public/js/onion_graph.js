@@ -28,11 +28,11 @@ function drawOnionGraph () {
 
   // console.log(radius, segmant)
 
-  d3.select('#Onion_Theory__diagram')
+  d3.select('#Onion_Theory__diagram__container')
     .selectAll('*')
     .remove()
 
-  const svg = d3.select('#Onion_Theory__diagram')
+  const svg = d3.select('#Onion_Theory__diagram__container')
     .append('svg')
     .attr('width', canvasWidth)
     .attr('height', canvasHeight)
@@ -209,15 +209,15 @@ function drawOnionGraph () {
   }
 
   function select (target) {
-    const rings = [ringOne, ringTwo, ringThree, ringFour, ringFive]
-    const thisRing = rings.splice(target-1, 1)
-    console.log(canvasWidth, canvasWidth / 4)
-    canvas.style('transform', `translate(-${(canvasWidth / 4) + radius / 2}px, ${radius * .1}px)`)
-    setTimeout(deselect, 3000)
+    // const rings = [ringOne, ringTwo, ringThree, ringFour, ringFive]
+    // const thisRing = rings.splice(target-1, 1)
+    // console.log(canvasWidth, canvasWidth / 4)
+    // canvas.style('transform', `translate(-${(canvasWidth / 4)}px, ${radius * .1}px)`)
+    // setTimeout(deselect, 3000)
   }
 
   function deselect () {
-    canvas.style('transform', `translate(0px, 0px)`)
+    // canvas.style('transform', `translate(0px, 0px)`)
   }
 }
 

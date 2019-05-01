@@ -360,33 +360,25 @@ section.Onion_Theory {
     }
   }
   .Onion_Theory__diagram {
-    .onion-diagram {
-      max-height: calc(80vh - 50px);
-      max-width: 100vw;
-    }
-    .onion-diagram-1 {
-      fill: #ecf0f1;
-    }
-    .onion-diagram-2 {
-      fill: #e06454;
-    }
-    .onion-diagram-3 {
-      font-size: 12px;
-      fill: #231f20;
-      font-family: Segoe UI;
-      font-weight: 700;
-    }
-    .onion-diagram-4 {
-      fill: #b892c0;
-    }
-    .onion-diagram-5 {
-      fill: #3aaad4;
-    }
-    .onion-diagram-6 {
-      fill: #5fc095;
-    }
-    .onion-diagram-7 {
-      fill: #fbb464;
+    .Onion_Theory__diagram__descriptions {}
+    .Onion_Theory__diagram__container {
+      .onion-diagram-static {
+        max-height: calc(80vh - 50px);
+        max-width: 100vw;
+      }
+      .onion-diagram-static-1 { fill: #ecf0f1; }
+      .onion-diagram-static-2 { fill: #e06454; }
+      .onion-diagram-static-3 {
+        font-size: 12px;
+        fill: #231f20;
+        font-family: 'Segoe UI';
+        font-weight: 700;
+      }
+      .onion-diagram-static-4 { fill: #b892c0; }
+      .onion-diagram-static-5 { fill: #3aaad4; }
+      .onion-diagram-static-6 { fill: #5fc095; }
+      .onion-diagram-static-7 { fill: #fbb464; }
+
     }
     .Onion_Theory__diagram--dynamic {
       .Onion_Theory__diagram--dynamic__canvas {
