@@ -8,6 +8,11 @@ $qube_level_3: #5fc095;
 $qube_level_4: #3aaad4;
 $qube_level_5: #b892c0;
 
+html {
+  width: 100%;
+  height: 100%;
+}
+
 h2 {
   color: #ecf0f1;
   font-size: 9vh;
@@ -661,7 +666,22 @@ section.Contact {
       padding: 20px;
     }
   }
+  section.Contact {
+    .Contact__grid {
+      flex-direction: column;
+      align-items: stretch;
+      .Contact__grid__info {
 
+      }
+      .Contact__grid__updates {
+        border-left: none;
+        border-top: 1px solid #2d3e50;
+        hr {
+
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 1000px) {
