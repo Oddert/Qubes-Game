@@ -2,11 +2,11 @@
 $brand_primary_colour: #a4c2d8;
 $image_shadow_standard: 10px 10px 20px rgba(0,0,0,0.3);
 
-$qube_level_1: #e06454;
-$qube_level_2: #fbb464;
-$qube_level_3: #5fc095;
-$qube_level_4: #3aaad4;
-$qube_level_5: #b892c0;
+$bloq_level_1: #e06454;
+$bloq_level_2: #fbb464;
+$bloq_level_3: #5fc095;
+$bloq_level_4: #3aaad4;
+$bloq_level_5: #b892c0;
 
 html {
   width: 100%;
@@ -150,7 +150,7 @@ nav.Nav {
         a {
           li {
             color: #fff;
-            .qubes-logo-svg {
+            .bloqs-logo-svg {
               height: $nav_height * .5;
               height: 22px;
               margin-right: 2px;
@@ -174,11 +174,11 @@ nav.Nav {
         }
       }
       a {
-        &:nth-child(1):hover li { color: $qube_level_1; }
-        &:nth-child(2):hover li { color: $qube_level_2; }
-        &:nth-child(3):hover li { color: $qube_level_3; }
-        &:nth-child(4):hover li { color: $qube_level_4; }
-        &:nth-child(5):hover li { color: $qube_level_5; }
+        &:nth-child(1):hover li { color: $bloq_level_1; }
+        &:nth-child(2):hover li { color: $bloq_level_2; }
+        &:nth-child(3):hover li { color: $bloq_level_3; }
+        &:nth-child(4):hover li { color: $bloq_level_4; }
+        &:nth-child(5):hover li { color: $bloq_level_5; }
         text-decoration: none;
         display: flex;
         align-items: center;
@@ -330,7 +330,7 @@ section.Prison {
 section.Onion_Theory {
   padding: 100px 50px;
   background-color: $brand_primary_colour;
-  background: url("/img/qubes-layer-background.png");
+  background: url("/img/bloqs-layer-background.png");
   background-position: center;
   background-size: cover;
   .Onion_Theory__head {
@@ -426,7 +426,7 @@ section.Onion_Theory {
 }
 
 section.Futures {
-  background: url("/img/qubes-laser.png");
+  background: url("/img/bloqs-laser.png");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -502,20 +502,20 @@ section.Futures {
           color: #ecf0f1;
           text-shadow: 0 0 4px rgba(0,0,0,1);
           &:nth-child(1) {
-            background: $qube_level_1;
+            background: $bloq_level_1;
             border-radius: 20px 0 0 0;
           }
           &:nth-child(2) {
-            background: $qube_level_2;
+            background: $bloq_level_2;
           }
           &:nth-child(3) {
-            background: $qube_level_3;
+            background: $bloq_level_3;
           }
           &:nth-child(4) {
-            background: $qube_level_4;
+            background: $bloq_level_4;
           }
           &:nth-child(5) {
-            background: $qube_level_5;
+            background: $bloq_level_5;
           }
           &:nth-child(6) {
             border-radius: 0 0 20px 0;

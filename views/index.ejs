@@ -8,16 +8,16 @@
     <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="/css/master.css">
     <link rel="stylesheet" href="/css/index.css">
-    <title><%= game_name %> | Question Cubes</title>
+    <title><%= game_name %> | Question <%= brick_multiple %></title>
   </head>
   <body>
     <section class="Banner">
       <div class="Banner__image">
-        <img src="/img/qubes-banner-temp.jpg" alt="<%= game_name %> Banner Image">
+        <img src="/img/bloqs-banner-temp.jpg" alt="<%= game_name %> Banner Image">
       </div>
       <div class="Banner__text">
         <h1><%= game_name.toUpperCase() %></h1>
-        <p>Question Cubes  |  A Constructor for Relationships</p>
+        <p>Question <%= brick_multiple %>  |  A Constructor for Relationships</p>
       </div>
     </section>
     <nav class="Nav">
@@ -25,7 +25,7 @@
         <span class="Nav--logo">
           <a href="#">
             <li title="<%= game_name %> Home">
-              <% include ./partials/svg/qubes-logo.svg %>
+              <% include ./partials/svg/bloqs-logo.svg %>
               ubes
             </li>
           </a>
@@ -75,10 +75,10 @@
     <section class="About" id="about">
       <div class="About__flex">
         <div class="About__flex__section image">
-          <img src="/img/qubes-contruct-in-play.png" alt="The <%= brick_multiple %> game in play" class="About__main_image">
+          <img src="/img/bloqs-contruct-in-play.png" alt="The <%= brick_multiple %> game in play" class="About__main_image">
         </div>
         <div class="About__flex__section text">
-          <h2>Question Cubes</h2>
+          <h2>Question <%= brick_multiple %></h2>
           <p class="first"><%= game_name %> is a group stacking game with questions, the culmination of a project designed to build communication and strengthen relationships between incarcerated fathers and their children.</p>
           <p>In a time of rising prison population, deteriorating conditions and health, and the host of problems which feed into loops of deprivation and crime.</p>
           <p>Extending the category of Social Games, <%= game_name %> was inspired by Captivated, a project South Denmark University’s Social Games Against Crime team which sought to tackle the same issue of parental alienation in prison.</p>
@@ -185,15 +185,15 @@
     <section class="Futures" id="futures">
       <div class="Futures__grid">
         <div class="Futures__grid__title">
-          <img src="/img/qubes-logo-variant-arrow__white.png" alt="<%= game_name %> logo with an arrow">
+          <img src="/img/bloqs-logo-variant-arrow__white.png" alt="<%= game_name %> logo with an arrow">
           <h2>Futures.</h2>
         </div>
         <div class="Futures__grid__text">
           <div class="Futures__grid__text--inner">
             <span>
               <p>When South Denmark University’s Social Games Against Crime team developed Captivated they did so over 3 years with full research funding from TrygFonden and were able to design and test a complete outcome currently being used in the Danish prison system.</p>
-              <p>Qubes was developed without funding in under 6 months.</p>
-              <p>As such, while the outcome is functional, it did not have access to some of the research and professional links needed to make it air-tight. Design Against Crime is in the process of perusing a research grant in order to take Qubes to the next level. This would involve: </p>
+              <p><%= game_name %> was developed without funding in under 6 months.</p>
+              <p>As such, while the outcome is functional, it did not have access to some of the research and professional links needed to make it air-tight. Design Against Crime is in the process of perusing a research grant in order to take <%= game_name %> to the next level. This would involve: </p>
             </span>
             <ul class="Futures__grid__text--bullet-list">
               <li>1) Working more with children and young adults of the affected groups.</li>

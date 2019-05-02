@@ -3,9 +3,9 @@ const router = require('express').Router()
 router.route('/')
   .get((req, res, next) =>
     res.render('index', {
-      game_name: req.query.name ? req.query.name : 'Qubes',
-      brick_single: req.query.object ? req.query.object : 'Qube',
-      brick_multiple: req.query.object ? req.query.object + 's' : 'Qubes',
+      game_name: req.query.name ? req.query.name : 'Bloqs',
+      brick_single: req.query.object ? req.query.object : 'Bloq',
+      brick_multiple: req.query.object ? req.query.object + 's' : 'Bloqs',
       brick_prefix: 'a',
       updates: null
     })

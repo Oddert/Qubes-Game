@@ -117,7 +117,7 @@ nav.Nav {
         align-items: center;
         font-weight: 700;
         font-size: 22px; }
-        nav.Nav ul span.Nav--logo a li .qubes-logo-svg {
+        nav.Nav ul span.Nav--logo a li .bloqs-logo-svg {
           height: 25px;
           height: 22px;
           margin-right: 2px; }
@@ -247,7 +247,7 @@ section.Prison {
 section.Onion_Theory {
   padding: 100px 50px;
   background-color: #a4c2d8;
-  background: url("/img/qubes-layer-background.png");
+  background: url("/img/bloqs-layer-background.png");
   background-position: center;
   background-size: cover; }
   section.Onion_Theory .Onion_Theory__head {
@@ -321,7 +321,7 @@ section.Onion_Theory {
       cursor: pointer; }
 
 section.Futures {
-  background: url("/img/qubes-laser.png");
+  background: url("/img/bloqs-laser.png");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
