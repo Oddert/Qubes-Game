@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="/css/master.css">
     <link rel="stylesheet" href="/css/index.css">
@@ -211,7 +212,43 @@
       <div class="Contact__grid">
         <div class="Contact__grid__info">
           <h2>Contact</h2>
-          <p>[ Under Construction ]</p>
+          <h3><%= game_name %> was developed by the Design Against Crime Research Centre, Central Saint Martins, University of the Arts London.</h3>
+          <div class="Contact__grid__info--email">
+            <a href="mailto:r.veitch@arts.ac.uk"><i class="fa fa-envelope"></i> Get in Touch</a>
+          </div>
+          <p class="Contact__grid__info--share_label">In partnership with the Social Design Research Group, Department of Design & Communication / SDU.</p>
+          <div class="Contact__grid__info--logos">
+            <div>
+              <a href="http://www.designagainstcrime.com/">
+                <img src="/img/dac-logo-primary.png" alt="Design Against Crime Logo" />
+              </a>
+            </div>
+            <div>
+              <a href="https://www.arts.ac.uk/research">
+                <img src="/img/ual-logo-research.png" alt="UAL Research Logo" />
+              </a>
+            </div>
+            <div>
+              <a href="https://www.gov.uk/government/organisations/ministry-of-justice">
+                <img src="/img/moj-logo-primary.png" alt="Ministry of Justice Logo" />
+              </a>
+            </div>
+            <div>
+              <a href="http://socialdesignunit.org/">
+                <img src="/img/sdu-logo-primary.png" alt="SDU Logo" />
+              </a>
+            </div>
+          </div>
+          <p class="Contact__grid__info--share_label">Share this Page:</p>
+          <div class="Contact__grid__info--share">
+            <a href="https://twitter.com/intent/tweet?text=<%= location %> A Social Game to help incarcerated fathers reconnect with their kids. -By Design Against Crime https://designagainstcrime.com/" class="social twitter" title="Share on Twitter" target="_blank"><i class="fab fa-3x fa-twitter"></i></a>
+            <a href="https://www.facebook.com/sharer.php?u=<%= location %>" class="social facebook" title="Share on Facebook" target="_blank"><i class="fab fa-3x fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=<%= location %>&title=Bloqs Question Blocks&summary=A Social Game to help incarcerated fathers reconnect with their kids. -By Design Against Crime" class="social linkedin" title="Share on Linkedin" target="_blank"><i class="fab fa-3x fa-linkedin"></i></a>
+            <button class="social link" title="Copy Link" target="_blank" data-link="<%= location %>"><i class="fas fa-3x fa-link"></i></button>
+          </div>
+          <div class="notifier" hidden>
+            <p>Copied: "<span><%= location %></span>" to clipboard.</p>
+          </div>
         </div>
         <div class="Contact__grid__updates">
           <h2>Updates</h2>
@@ -225,10 +262,21 @@
               </div>
             <% }) %>
           <% } else { %>
-            <p>Check back here for news and updates</p>
+            <p><em>Check back here for news and updates in the future</em></p>
           <% } %>
         </div>
       </div>
+      <!-- <div class="Contact__dac">
+        <h3>Design Against Crime</h3>
+        <div class="Contact__dac__grid">
+          <div>
+
+          </div>
+          <div>
+
+          </div>
+        </div>
+      </div> -->
     </section>
     <section style="height: 300vh; background: #3e3e3e;">
     </section>

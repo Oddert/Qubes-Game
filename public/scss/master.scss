@@ -45,3 +45,33 @@ svg {
     clip-path: url(#clip-path);
   }
 }
+
+.notifier {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: #222;
+  z-index: 990;
+  border-radius: 10px;
+  transform: translateY(100%);
+  transition: .05s linear;
+  opacity: 0;
+  padding: 5px;
+  &.show {
+    transition: .1s linear;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  &.fade {
+    animation: fadeOut 1s linear;
+  }
+  &.fade-fast {
+    animation: fadeOut .5s linear;
+  }
+  p, span {
+    padding: 0;
+    margin:0;
+    color: #ecf0f1;
+    word-break: break-all;
+  }
+}

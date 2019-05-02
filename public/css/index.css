@@ -415,6 +415,104 @@ section.Contact {
       display: flex;
       flex-direction: column;
       justify-content: center; }
+      section.Contact .Contact__grid .Contact__grid__info .Contact__grid__info--logos {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%; }
+        section.Contact .Contact__grid .Contact__grid__info .Contact__grid__info--logos div {
+          flex: 1; }
+          section.Contact .Contact__grid .Contact__grid__info .Contact__grid__info--logos div a img {
+            max-width: 60%;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px; }
+      section.Contact .Contact__grid .Contact__grid__info .rename {
+        display: flex;
+        flex-direction: row;
+        width: 100%; }
+        section.Contact .Contact__grid .Contact__grid__info .rename div {
+          flex: 1; }
+      section.Contact .Contact__grid .Contact__grid__info .Contact__grid__info--email {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 20px 0;
+        margin: 30px 0; }
+        section.Contact .Contact__grid .Contact__grid__info .Contact__grid__info--email * {
+          color: #ecf0f1; }
+        section.Contact .Contact__grid .Contact__grid__info .Contact__grid__info--email a {
+          padding: 10px 20px;
+          font-size: 26px;
+          background: #27ae61;
+          border: 2px solid #27ae61;
+          display: block;
+          text-decoration: none;
+          border-radius: 20px;
+          transition: .2s linear;
+          box-shadow: 6px 6px 10px rgba(62, 92, 114, 0.2); }
+          section.Contact .Contact__grid .Contact__grid__info .Contact__grid__info--email a:hover {
+            color: #fff;
+            box-shadow: 6px 6px 30px rgba(62, 92, 114, 0.4);
+            border: 2px solid #2dcc70;
+            background: #2dcc70; }
+            section.Contact .Contact__grid .Contact__grid__info .Contact__grid__info--email a:hover a {
+              color: #fff; }
+      section.Contact .Contact__grid .Contact__grid__info .Contact__grid__info--share_label {
+        font-weight: bold; }
+      section.Contact .Contact__grid .Contact__grid__info .Contact__grid__info--share {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 20px 0; }
+        section.Contact .Contact__grid .Contact__grid__info .Contact__grid__info--share .social {
+          border: 2px solid;
+          border-radius: 50%;
+          width: 65px;
+          height: 65px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          background: rgba(0, 0, 0, 0);
+          cursor: pointer;
+          transition: .1s linear; }
+          section.Contact .Contact__grid .Contact__grid__info .Contact__grid__info--share .social i {
+            font-size: 30px; }
+          section.Contact .Contact__grid .Contact__grid__info .Contact__grid__info--share .social.twitter {
+            border-color: #1DA1F2; }
+            section.Contact .Contact__grid .Contact__grid__info .Contact__grid__info--share .social.twitter:hover {
+              border-color: #a4c2d8;
+              color: #1DA1F2;
+              box-shadow: 0 0 10px #1DA1F2; }
+              section.Contact .Contact__grid .Contact__grid__info .Contact__grid__info--share .social.twitter:hover i {
+                color: #1DA1F2; }
+          section.Contact .Contact__grid .Contact__grid__info .Contact__grid__info--share .social.facebook {
+            border-color: #4267B2; }
+            section.Contact .Contact__grid .Contact__grid__info .Contact__grid__info--share .social.facebook:hover {
+              border-color: #a4c2d8;
+              color: #4267B2;
+              box-shadow: 0 0 10px #4267B2; }
+              section.Contact .Contact__grid .Contact__grid__info .Contact__grid__info--share .social.facebook:hover i {
+                color: #4267B2; }
+          section.Contact .Contact__grid .Contact__grid__info .Contact__grid__info--share .social.linkedin {
+            border-color: #0077B5; }
+            section.Contact .Contact__grid .Contact__grid__info .Contact__grid__info--share .social.linkedin:hover {
+              border-color: #a4c2d8;
+              color: #0077B5;
+              box-shadow: 0 0 10px #0077B5; }
+              section.Contact .Contact__grid .Contact__grid__info .Contact__grid__info--share .social.linkedin:hover i {
+                color: #0077B5; }
+          section.Contact .Contact__grid .Contact__grid__info .Contact__grid__info--share .social.link:hover {
+            border-color: #a4c2d8;
+            box-shadow: 0px 3px 8px 0px #1bbc9b, 0px -3px 8px 0px #9a59b5, 3px 0px 8px 0px #1bbc9b, -3px 0px 8px 0px #9a59b5;
+            background: linear-gradient(45deg, #2dcc70, #1bbc9b, #9a59b5, #e84c3d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-box-decoration-break: clone; }
+            section.Contact .Contact__grid .Contact__grid__info .Contact__grid__info--share .social.link:hover i {
+              color: #0077B5; }
     section.Contact .Contact__grid .Contact__grid__updates {
       flex: 1;
       display: flex;
