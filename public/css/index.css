@@ -247,7 +247,7 @@ section.Prison {
 section.Onion_Theory {
   padding: 100px 50px;
   background-color: #a4c2d8;
-  background: url("/img/bloqs-layer-background.png");
+  background: url("/img/bloqs-layer-background.jpg");
   background-position: center;
   background-size: cover; }
   section.Onion_Theory .Onion_Theory__head {
@@ -321,7 +321,7 @@ section.Onion_Theory {
       cursor: pointer; }
 
 section.Futures {
-  background: url("/img/bloqs-laser.png");
+  background: url("/img/bloqs-laser.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
