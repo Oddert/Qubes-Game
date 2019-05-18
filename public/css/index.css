@@ -245,7 +245,7 @@ section.Prison {
           font-weight: bold; }
 
 section.Onion_Theory {
-  padding: 100px 50px;
+  padding: 100px 0px;
   background-color: #a4c2d8;
   background: url("/img/bloqs-layer-background.jpg");
   background-position: center;
