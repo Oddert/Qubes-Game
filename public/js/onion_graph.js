@@ -16,10 +16,11 @@ function debounce(func, wait=20, immediate=true) {
 };
 
 let onionSelected = false
+let currentTarget
 
 function drawOnionGraph () {
-  const canvasWidth = window.innerWidth - 120
-  const canvasHeight = window.innerHeight - 120
+  const canvasWidth = window.innerWidth - 20
+  const canvasHeight = window.innerHeight - 20
 
   const max = (val1, val2) => val2 > val1 ? val2 : val1
   const min = (val1, val2) => val1 < val2 ? val1 : val2
@@ -190,8 +191,10 @@ function drawOnionGraph () {
     const texts = [textOne, textTwo, textThree, textFour, textFive]
     const thisRing = rings.splice(target, 1)
     const thisText = texts.splice(target, 1)
+    // console.log({ currentTarget })
 
     if (activate) {
+      // console.log(`(197): Activate: ${activate}`, onionSelected ? 'inactive' : 'default')
       rings.forEach((each, idx) => {
         each.attr('fill', colours[idx].inactive)
         each.style('opacity', '.5')
@@ -202,7 +205,8 @@ function drawOnionGraph () {
       })
     } else {
       rings.forEach((each, idx) => {
-        each.attr('fill', colours[idx].default)
+        // console.log(`(207): Activate: ${activate}`, { target, currentTarget }, onionSelected && target === currentTarget ? 'inactive' : 'default')
+        each.attr('fill', onionSelected && idx !== currentTarget ? colours[idx].inactive : colours[idx].hover)
         each.style('opacity', '1')
       })
       texts.forEach((each, idx) => {
@@ -244,6 +248,7 @@ function drawOnionGraph () {
       .style('left', `${(canvasWidth / 4) + 50}px`)
 
     onionSelected = true
+    currentTarget = target
     // setTimeout(deselect, 6000)
   }
 
@@ -260,7 +265,7 @@ function drawOnionGraph () {
       .style('left', `${(canvasWidth / 4) + 50}px`)
       let descDOM = document.querySelector('.Onion_Theory__diagram__descriptions')
       descDOM.classList.remove('show')
-    onionSelected = false
+      onionSelected = false
   }
 }
 
