@@ -2,7 +2,7 @@ const router = require('express').Router()
 
 router.route('/')
   .get((req, res, next) => {
-      console.log(process.env.LOCATION ? process.env.LOCATION : 'https://oddert-mos-matterial-vis.glitch.me')
+      // console.log(process.env.LOCATION ? process.env.LOCATION : 'https://oddert-mos-matterial-vis.glitch.me')
       res.render('index', {
         game_name: req.query.name ? req.query.name : 'Bloqs',
         brick_single: req.query.object ? req.query.object : 'Bloq',

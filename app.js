@@ -9,7 +9,15 @@ const express = require('express')
 
 const PORT = process.env.PORT || 3000
 
-app.use(helmet())
+app.use(helmet({
+  frameguard: {
+    action: 'deny'
+  },
+  hidePoweredBy: {
+    setTo: process.env.POWERED_BY || 'fm'
+  },
+  dnsPrefetchControl: true
+}))
 
 app.set('view engine', 'ejs')
 app.use(bodyParser.urlencoded({ extended: true }))

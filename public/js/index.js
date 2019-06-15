@@ -6,11 +6,23 @@ const navToggle = document.querySelector('.Nav__toggle')
 
 let navDropOpen = false
 
+function closeMenuListener (e) {
+  if (!nav.contains(e.target)) {
+    toggleNavDrop ()
+  }
+}
+
 function toggleNavDrop (open) {
   if (open) navDropOpen = true
   else navDropOpen = !navDropOpen
-  if (navDropOpen && !nav.classList.contains('open')) nav.classList.add('open')
-  if (!navDropOpen && nav.classList.contains('open')) nav.classList.remove('open')
+  if (navDropOpen && !nav.classList.contains('open')) {
+    nav.classList.add('open')
+    document.addEventListener('click', closeMenuListener)
+  }
+  if (!navDropOpen && nav.classList.contains('open')) {
+    nav.classList.remove('open')
+    document.removeEventListener('click', closeMenuListener)
+  }
 }
 
 function scrollTop (e) {

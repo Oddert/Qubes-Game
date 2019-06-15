@@ -377,6 +377,9 @@ section.Futures {
         list-style-type: none;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+        section.Futures .Futures__grid .Futures__grid__text .Futures__grid__text--bullet-list i {
+          color: #ecf0f1;
+          text-shadow: none; }
         section.Futures .Futures__grid .Futures__grid__text .Futures__grid__text--bullet-list li {
           display: flex;
           align-items: center;
@@ -403,7 +406,7 @@ section.Futures {
 section.Contact {
   background: #a4c2d8;
   min-height: 100vh;
-  padding: 50vh 0; }
+  padding: 50vh 0 300px 0; }
   section.Contact .Contact__grid {
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
     padding: 100px;
@@ -524,6 +527,15 @@ section.Contact {
         width: 80%;
         border: 1px solid #ecf0f1; }
 
+footer {
+  background: #a4c2d8;
+  margin: 0;
+  padding: 50px 50px;
+  text-align: center; }
+  footer h3 {
+    margin: 0;
+    padding: 0; }
+
 @media only screen and (max-width: 850px) {
   nav.Nav ul .Nav__toggle {
     color: red;
@@ -538,9 +550,13 @@ section.Contact {
     visibility: none;
     display: none;
     opacity: 0;
-    transition: visibility 0s, opacity .1s linear; }
+    transition: visibility 0s, opacity .1s linear;
+    width: 50vw;
+    height: 100vh; }
     nav.Nav ul span.Nav--items li {
       padding: 3vw 6vw; }
+    nav.Nav ul span.Nav--items a:first-child {
+      margin-top: 50px; }
   nav.Nav.open ul span.Nav--items {
     display: flex;
     visibility: visible;
@@ -600,7 +616,7 @@ section.Contact {
       font-size: 14px;
       line-height: 22px; }
   section.Futures .Futures__grid .Futures__grid__title img {
-    height: 50px; }
+    max-height: 50px; }
   section.Futures .Futures__grid .Futures__grid__title h2 {
     margin: 0; }
   section.Futures .Futures__grid .Futures__grid__text .Futures__grid__text--inner {
@@ -615,6 +631,6 @@ section.Contact {
       font-size: 14px;
       line-height: 22px; }
   section.Contact {
-    padding: 100vh 0 10vh 0; }
+    padding: 100vh 0 100px 0; }
     section.Contact .Contact__grid {
       padding: 10px; } }
