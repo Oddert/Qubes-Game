@@ -173,7 +173,7 @@ function drawOnionGraph () {
     .on('click', () => select(2))
 
   const textFour = canvas.append('text')
-    .text('4) Deap Fears and Fantasies')
+    .text('4) Deep Fears and Fantasies')
     .style('font-size', '14px')
     .attr('x', (canvasWidth / 2) + 20)
     .attr('y', (canvasHeight / 2) - (radius - (segmant * 4)) - sectionWidth)
