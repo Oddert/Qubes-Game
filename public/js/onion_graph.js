@@ -252,6 +252,9 @@ function drawOnionGraph () {
     // setTimeout(deselect, 6000)
   }
 
+// no type on code plz thank
+// =========================
+
   function deselect () {
     const texts = [textOne, textTwo, textThree, textFour, textFive]
     texts.forEach(each => {
