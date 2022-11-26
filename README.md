@@ -10,10 +10,10 @@ Bloqs was developed by the Design Against Crime Research Centre, Central Saint M
 
 ## Links
 
-Design Against Crime Research Centre http://www.designagainstcrime.com/
-University of the arts London Research: https://www.arts.ac.uk/research
-MOJ: https://www.gov.uk/government/organisations/ministry-of-justice
-University of Southern Denmark: http://socialdesignunit.org/
+- Design Against Crime Research Centre http://www.designagainstcrime.com/
+- University of Southern Denmark: http://socialdesignunit.org/
+- University of the arts London Research: https://www.arts.ac.uk/research
+- MOJ: https://www.gov.uk/government/organisations/ministry-of-justice
 
 ## Setup
 
