@@ -1,0 +1,81 @@
+* {
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #2d3e50;
+}
+
+html {
+  height: 100%;
+}
+
+html, body, section {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  // width: 100vw;
+}
+
+.bloqs-logo-svg {
+  height: 100%;
+  .bloqs-logo-1 {
+    fill: #fff;
+  }
+
+}
+
+svg {
+  .instructions-three-1 {
+    fill: none;
+  }
+  .instructions-three-2 {
+    fill: #fff;
+  }
+  .instructions-three-3 {
+    clip-path: url(#clip-path);
+  }
+  .instructions-two-1 {
+    fill: none;
+  }
+  .instructions-two-2 {
+    clip-path: url(#clip-path);
+  }
+  .instructions-one-1 {
+    fill: none;
+  }
+  .instructions-one-2 {
+    fill: #fff;
+  }
+  .instructions-one-3 {
+    clip-path: url(#clip-path);
+  }
+}
+
+.notifier {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: #222;
+  z-index: 990;
+  border-radius: 10px;
+  transform: translateY(100%);
+  transition: .05s linear;
+  opacity: 0;
+  padding: 5px;
+  &.show {
+    transition: .1s linear;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  &.fade {
+    animation: fadeOut 1s linear;
+  }
+  &.fade-fast {
+    animation: fadeOut .5s linear;
+  }
+  p, span {
+    padding: 0;
+    margin:0;
+    color: #ecf0f1;
+    word-break: break-all;
+  }
+}
