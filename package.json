@@ -22,7 +22,7 @@
     "fstream": "^1.0.12",
     "helmet": "^6.0.0",
     "nodemon": "^2.0.20",
-    "sass": "^1.20.1",
+    "sass": "^1.56.1",
     "tar": "^4.4.19"
   },
   "devDependencies": {
