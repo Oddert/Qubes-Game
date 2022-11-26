@@ -16,16 +16,16 @@
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.4",
     "dotenv": "^7.0.0",
-    "ejs": "^2.6.1",
+    "ejs": "^3.1.8",
     "express": "^4.16.4",
     "fstream": "^1.0.12",
-    "helmet": "^3.16.0",
-    "nodemon": "^1.19.0",
+    "helmet": "^6.0.0",
+    "nodemon": "^2.0.20",
     "sass": "^1.20.1",
-    "tar": "^4.4.8"
+    "tar": "^4.4.19"
   },
   "devDependencies": {
-    "concurrently": "^4.1.0",
-    "node-sass": "^4.11.0"
+    "concurrently": "^7.6.0",
+    "node-sass": "^8.0.0"
   }
 }
