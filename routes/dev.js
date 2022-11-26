@@ -1,6 +1,6 @@
-const router = require('express').Router();
+const router = require('express').Router()
 
 router.route('/placeholder')
-    .get((req, res, next) => res.send('Page placeholder, will implement asap'));
+    .get((req, res) => res.send('Page placeholder, will implement asap'))
 
-module.exports = router;
+module.exports = router
